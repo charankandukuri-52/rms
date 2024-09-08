@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/bootstrap4-light-purple/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "../node_modules/quill/dist/quill.core.css";
+@import "../node_modules/quill/dist/quill.snow.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.handwriting{
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
