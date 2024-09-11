@@ -1,0 +1,46 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# Pytest cache
+.cache/
+
+# Logs
+*.log
+
+# Local environment files
+.env
+
+# MacOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+**/.Trashes
+**/.Spotlight-V100
+
+# MongoDB data files (if used locally)
+mongodb_data/
+
+# Optional: You can add other files or directories specific to your development environment that you don't want to track
