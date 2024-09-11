@@ -1,0 +1,24 @@
+# Core dependencies
+fastapi
+pymongo
+
+# For environment management
+python-dotenv
+
+# For testing
+pytest
+pytest-mock
+httpx
+
+# For data validation
+pydantic
+
+# For development and debugging
+flake8
+black
+
+# Optional: For performance and profiling (if needed)
+pytest-cov
+
+# Optional: For asynchronous support (if needed)
+aiohttp
