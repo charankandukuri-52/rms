@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides an overview of the API endpoints for the Restaurant Management System. The API supports management of restaurants, staff, users, assets, and menus, and includes functionality for calculating profits.
+This document provides an overview of the API endpoints for the Restaurant Management System. The API supports management of restaurants, staff, users, assets, and menus, includes functionality for calculating profits, and provides role-based authentication.
 
 ## Base URL
 
@@ -395,11 +395,11 @@ http://localhost:8000
 
 #### Delete User
 
-- **Endpoint**: `/users
-
-/{user_id}`
+- **Endpoint**: `/users/{user_id}`
 - **Method**: `DELETE`
-- **Description**: Delete a user by their ID.
+- **Description**:
+
+ Delete a user by their ID.
 - **Path Parameters**:
   - `user_id` (string): The ID of the user to delete.
 
@@ -745,3 +745,146 @@ http://localhost:8000
       }
       ```
 
+### 7. Role-Based Authentication
+
+#### Register User
+
+- **Endpoint**: `/auth/register/`
+- **Method**: `POST`
+- **Description**: Register a new user with a role.
+- **Request Body**:
+
+    ```json
+    {
+      "username": "string",
+      "password": "string",
+      "email": "email@example.com",
+      "role": "admin"  // or "user"
+    }
+    ```
+
+- **Response**:
+
+    - **Success (201 Created)**:
+
+      ```json
+      {
+        "user_id": "string",
+        "username": "string",
+        "email": "email@example.com",
+        "role": "admin"
+      }
+      ```
+
+    - **Error (400 Bad Request)**:
+
+      ```json
+      {
+        "detail": "Invalid request data"
+      }
+      ```
+
+#### Login User
+
+- **Endpoint**: `/auth/login/`
+- **Method**: `POST`
+- **Description**: Authenticate a user and return a token.
+- **Request Body**:
+
+    ```json
+    {
+      "username": "string",
+      "password": "string"
+    }
+    ```
+
+- **Response**:
+
+    - **Success (200 OK)**:
+
+      ```json
+      {
+        "access_token": "string",
+        "token_type": "bearer",
+        "expires_in": 3600
+      }
+      ```
+
+    - **Error (
+
+401 Unauthorized)**:
+
+      ```json
+      {
+        "detail": "Invalid credentials"
+      }
+      ```
+
+#### Logout User
+
+- **Endpoint**: `/auth/logout/`
+- **Method**: `POST`
+- **Description**: Invalidate the current user’s session.
+- **Headers**:
+  - `Authorization`: `Bearer <access_token>`
+
+- **Response**:
+
+    - **Success (200 OK)**:
+
+      ```json
+      {
+        "detail": "Successfully logged out"
+      }
+      ```
+
+    - **Error (401 Unauthorized)**:
+
+      ```json
+      {
+        "detail": "Invalid or expired token"
+      }
+      ```
+
+#### Change Password
+
+- **Endpoint**: `/auth/change_password/`
+- **Method**: `PUT`
+- **Description**: Change the current user’s password.
+- **Headers**:
+  - `Authorization`: `Bearer <access_token>`
+
+- **Request Body**:
+
+    ```json
+    {
+      "old_password": "string",
+      "new_password": "string"
+    }
+    ```
+
+- **Response**:
+
+    - **Success (200 OK)**:
+
+      ```json
+      {
+        "detail": "Password updated successfully"
+      }
+      ```
+
+    - **Error (400 Bad Request)**:
+
+      ```json
+      {
+        "detail": "Invalid request data"
+      }
+      ```
+
+    - **Error (401 Unauthorized)**:
+
+      ```json
+      {
+        "detail": "Invalid credentials"
+      }
+      ```
