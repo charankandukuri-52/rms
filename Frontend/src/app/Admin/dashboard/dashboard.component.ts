@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import ApexCharts, { ApexOptions } from 'apexcharts';
+
 
 @Component({
   selector: 'app-dashboard',
