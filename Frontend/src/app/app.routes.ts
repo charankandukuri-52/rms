@@ -7,11 +7,16 @@ import { ManageRestuarantsComponent } from './app-data/manage-restuarants/manage
 import { ChangePasswordComponent } from './features/auth/change-password/change-password.component';
 import { BillPaymentComponent } from './features/bill-payment/bill-payment/bill-payment.component';
 import { BookTableComponent } from './features/book-table/book-table.component';
+import { RegistrationComponent } from './features/restaurant-registration/registration/registration.component';
+import { SignupComponent } from './features/auth/signup/signup.component';
 
 export const routes: Routes = [
     {
         path:'', component: HomePageComponent
     }, 
+    {
+      path: 'register', component: SignupComponent
+  },
     {
         path: 'login', component: LoginComponent
     }, {
