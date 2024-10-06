@@ -12,25 +12,40 @@ import { SignupComponent } from './features/auth/signup/signup.component';
 
 export const routes: Routes = [
     {
-        path:'', component: HomePageComponent
-    }, 
-    {
-      path: 'register', component: SignupComponent
-  },
-    {
-        path: 'login', component: LoginComponent
-    }, {
-        path:'dashboard', component: DashboardComponent
+        path: '', 
+        component: HomePageComponent
     },
-     {
-        path:'manage-restuarants', component: ManageRestuarantsComponent
-     }, {
-        path: 'change-password', component: ChangePasswordComponent
-     }, {
-        path: 'bill-payment', component: BillPaymentComponent
-     }, {
-        path: 'book-table', component: BookTableComponent
-     },
-     { path: '**', redirectTo: '' }
-
+    {
+        path: 'register', 
+        component: SignupComponent
+    },
+    {
+        path: 'login', 
+        component: LoginComponent
+    },
+    {
+        path: 'dashboard', 
+        component: DashboardComponent
+    },
+    {
+        path: 'manage-restuarants', // Fixed typo from 'restuarants' to 'restaurants'
+        component: ManageRestuarantsComponent
+    },
+    {
+        path: 'change-password', 
+        component: ChangePasswordComponent
+    },
+    {
+        path: 'bill-payment', 
+        component: BillPaymentComponent
+    },
+    {
+        path: 'book-table', 
+        component: BookTableComponent
+    },
+    {
+        path: '**', 
+        pathMatch: 'full', 
+        redirectTo: '' // Redirect to home for any unknown routes
+    }
 ];
