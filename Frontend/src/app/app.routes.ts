@@ -30,5 +30,7 @@ export const routes: Routes = [
         path: 'bill-payment', component: BillPaymentComponent
      }, {
         path: 'book-table', component: BookTableComponent
-     }
+     },
+     { path: '**', redirectTo: '' }
+
 ];
