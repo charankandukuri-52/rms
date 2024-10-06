@@ -17,3 +17,6 @@
     background-color: #5323e1;
     color: white;
 }
+input[type="checkbox"] {
+    fill: #7155fd; 
+  }

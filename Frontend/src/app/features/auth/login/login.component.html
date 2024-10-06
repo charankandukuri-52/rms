@@ -1,11 +1,11 @@
 <section class="bg-gray-50 ">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a href="#" class="flex items-center space-x-3 p-5 rtl:space-x-reverse">
-            <div class="bg-blue-500 shadow-lg  p-2 rounded-full hidden lg:flex">
+            <div class="bg-primary-500 shadow-lg  p-2 rounded-full hidden lg:flex">
             <img src="assets/spoon.svg" class="h-8" alt="Pingfood Logo">
     
             </div>
-            <span class="self-center flex handwriting text-3xl font-bold whitespace-nowrap ">Ping <p class="text-blue-500 font-bold">Food</p> </span>
+            <span class="self-center flex handwriting text-3xl font-bold whitespace-nowrap ">Ping <p class="text-primary-500 font-bold">Food</p> </span>
           </a>
         <div class="w-full bg-white rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0  ">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -16,26 +16,30 @@
 
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5     :ring-blue-500 :border-blue-500" placeholder="name@pingfood.com" requiblue="">
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5     :ring-primary-500 :border-primary-500" placeholder="name@pingfood.com" requiprimary="">
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5     :ring-blue-500 :border-blue-500" requiblue="">
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5     :ring-primary-500 :border-primary-500" requiprimary="">
                     </div>
                     <div class="flex items-center justify-between">
                         <div class="flex items-start">
                             <div class="flex items-center h-5">
-                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300   :ring-blue-600 " requiblue="">
+                              <input id="remember" aria-describedby="remember" type="checkbox" 
+                                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 
+                                       focus:ring-3 focus:ring-primary-300 accent-primary-500" 
+                                required>
                             </div>
                             <div class="ml-3 text-sm">
-                              <label for="remember" class="text-gray-500 ">Remember me</label>
+                              <label for="remember" class="text-gray-500">Remember me</label>
                             </div>
-                        </div>
-                        <a href="/change-password" class="text-sm font-medium text-blue-600 hover:underline ">Forgot password?</a>
+                          </div>
+                          
+                        <a href="/change-password" class="text-sm font-medium text-primary-600 hover:underline ">Forgot password?</a>
                     </div>
-                    <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  :bg-blue-700 :ring-blue-800">Sign in</button>
+                    <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  :bg-primary-700 :ring-primary-800">Sign in</button>
                     <p class="text-sm font-light text-gray-500 ">
-                        Dont have an account yet? <a href="#" class="font-medium text-blue-600 hover:underline ">Sign up</a>
+                        Dont have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline ">Sign up</a>
                     </p>
                 </form>
             </div>
